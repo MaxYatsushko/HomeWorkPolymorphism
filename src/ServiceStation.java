@@ -23,8 +23,13 @@ public class ServiceStation {
 
     public static void checkNew(Car car, Bicycle bicycle, Truck truck) {
         printUpdateTyre(car);
+        car.checkEngine();
+
         printUpdateTyre(bicycle);
+
         printUpdateTyre(truck);
+        truck.checkEngine();
+        truck.checkTrailer();
 
     }
     private static void printUpdateTyre(Transport obj){
@@ -34,6 +39,5 @@ public class ServiceStation {
                 obj.updateTyre();
             }
         }
-
     }
 }
